@@ -1,0 +1,38 @@
+{
+  "name": "compress-image-by-tinify",
+  "version": "0.1.8",
+  "description": "A small tool that compresses images through tinypng and uploads qiniu",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf ./lib && mkdir lib",
+    "lib": "npm run clean && NODE_ENV=production && babel src --out-dir lib ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pic",
+    "compresses",
+    "images",
+    "tinify",
+    "upload"
+  ],
+  "files": [
+    "lib/index.js",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "types": "./index.d.ts",
+  "author": "chenc",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "form-data": "^2.3.3",
+    "got": "^9.5.0",
+    "rimraf": "^2.6.2",
+    "tinify": "^1.6.0-beta.2"
+  }
+}
